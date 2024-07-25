@@ -132,7 +132,7 @@ function Dialouge({ handleClose, open }) {
     newSmallImages[index] = images.bigImage;
     setImages({ bigImage: newBigImage, smallImages: newSmallImages });
   };
-  const isTablet = useMediaQuery("(max-width:600px)");
+  const isMobile = useMediaQuery("(max-width:600px)");
   const isTablet1 = useMediaQuery("(max-width:1080px)");
 
   const handleDotClick = (index) => {
@@ -153,7 +153,7 @@ function Dialouge({ handleClose, open }) {
       >
         <DialogContent>
           <Grid container spacing={2}>
-            {isTablet ? (
+            {isMobile ? (
               <Grid container className={classes.carouselContainer}>
                 <Grid item sm={12}>
                   <img
@@ -241,7 +241,7 @@ function Dialouge({ handleClose, open }) {
               <Divider className={classes.dividerStyle}></Divider>
               <Grid container>
                 <Grid item md={7}>
-                  {isTablet ? (
+                  {isMobile ? (
                     <Grid container spacing={4}>
                       <Grid item sm={6}>
                         <Box>
@@ -432,7 +432,7 @@ function Dialouge({ handleClose, open }) {
                     </>
                   )}
                   <Divider className={classes.dividerStyle}></Divider>
-                  {isTablet ? (
+                  {isMobile ? (
                     <DialogActions sx={{ margin: "20px 0px" }}>
                       <Button
                         className={classes.buttonStyle}
@@ -459,7 +459,7 @@ function Dialouge({ handleClose, open }) {
                     30+ Amenities
                   </Typography>
                   <AminitiesList></AminitiesList>
-                  {!isTablet ? (
+                  {!isMobile ? (
                     <DialogActions>
                       <Button
                         className={classes.buttonStyle}
